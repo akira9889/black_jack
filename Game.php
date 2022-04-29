@@ -7,9 +7,9 @@ require_once('Dealer.php');
 
 class Game
 {
-    private array $players = [];
+    private $players = [];
     private $dealer;
-    public function __construct($players, private DeckInterface $deck = new Deck())
+    public function __construct(array $players, private DeckInterface $deck = new Deck())
     {
         foreach ($players as $player) {
             $this->players[] = new Player($player);
@@ -117,6 +117,3 @@ class Game
         echo 'ブラックジャックを終了します。';
     }
 }
-
-$game = new Game(['プレイヤー１','CP1']);
-$game->start();

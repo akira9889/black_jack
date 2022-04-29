@@ -4,5 +4,5 @@ namespace BlackJack;
 
 require_once('Game.php');
 
-$game = new Game('田中', 2, 'B');
+$game = new Game(['プレイヤー１', 'プレイヤー２']);
 $game->start();
